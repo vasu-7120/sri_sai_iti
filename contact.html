@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact - SRI SAI ITI">
+    <title>Contact - SRI SAI ITI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Loader styles */
+        #loader {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Container for the contact sections */
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px;
+            flex-wrap: wrap;
+        }
+
+        /* Left Section: Reach Out to Us */
+        .contact-details {
+            flex: 1;
+            max-width: 50%; /* Adjusts for larger screens */
+            padding: 20px;
+        }
+
+        .contact-details h2 {
+            font-size: 2rem;
+            color: white;
+	    background-color: #0a2a57;
+            margin-bottom: 20px;
+	    border-radius: 6px;
+            text-align: center;
+	    padding: 10px;
+        }
+
+        .contact-details ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .contact-details li {
+            font-size: 1.2rem;
+            margin: 10px 0;
+	    text-align: center;
+        }
+
+        /* Right Section: Contact Form */
+        .contact-form {
+            flex: 1;
+            max-width: 50%; /* Adjusts for larger screens */
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Contact Form Header */
+        .contact-form h2 {
+            font-size: 2rem;
+            background-color: #0a2a57;
+            margin-bottom: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Contact Form Fields */
+        .contact-form input,
+        .contact-form textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            width: 100%;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        /* Submit Button Styling */
+        .contact-form input[type="submit"] {
+            background-color: #0a2a57; /* Navy blue */
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #1a4a82; /* Lighter navy blue on hover */
+        }
+
+        /* Contact Page Background */
+        .contact-background {
+            background: #f4f4f4;
+            padding: 50px 0;
+        }
+
+        /* Footer (Same as in Home Page) */
+        footer {
+            background-color: #1a4a82;
+            text-align: center;
+            padding: 15px 0;
+            color: white;
+            font-size: 1rem;
+            margin-top: 40px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .contact-details,
+            .contact-form {
+                max-width: 100%;
+                margin: 10px 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo-container">
+            <!-- Logo Image -->
+            <img src="assets/images/logo.png" alt="Institute Logo" class="logo">
+        </div>
+
+        <!-- Hamburger Menu (Visible on Mobile) -->
+        <div class="hamburger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <div class="sidebar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="courses.html">Courses</a>
+            <a href="faculty.html">Faculty</a>
+            <a href="fee-structure.html">Fee Structure</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <!-- Main Navigation (Visible on Desktop) -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="fee-structure.html">Fee Structure</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-background">
+        <div class="contact-container">
+            <!-- Left Section: Contact Details -->
+            <div class="contact-details">
+                <h2>Contact Us</h2>
+                <ul>
+		    <h3>Call Us</h3>
+                    <li>+91-9440547910</li>
+                    <li>+91-9704357668</li>
+		    <h3>Email Us</h3>
+                    <li>bala.saitic@gmail.com</li>
+		    <h3>Postal Address</h3>
+                    <li>30-459, SRI SAI ITI, Kanipakam Road, Santhapet, Chittoor - 517004.</li>
+                </ul>
+            </div>
+
+            <!-- Right Section: Contact Form -->
+            <div class="contact-form" id="contactFormContainer">
+                <h2 class="contact-heading">Write To Us</h2>
+                <form id="contactForm" action="https://script.google.com/macros/s/AKfycbzY2bOb2S6ueiqE_-o9NDd-9TRwFLzeeFcK4Pekk26Nt7pN5TrKC5ctrYtVOEvEvZRZGQ/exec" method="POST" onsubmit="submitForm(event)">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="mobile" placeholder="Your Mobile Number" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Send Message">
+                    </div>
+                </form>
+                <div id="responseMessage"></div>
+            </div>
+        </div>
+        <!-- Loader -->
+        <div id="loader"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 SRI SAI ITI. All rights reserved.</p>
+        <p class="lays">Website Credits : vasu7120@gmail.com</p>
+    </footer>
+
+    <!-- JavaScript for Sidebar Toggle and Form Submission -->
+    <script>
+        // JavaScript function to handle form submission, display loader, and show success or failure message
+        function submitForm(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            var form = document.getElementById('contactForm');
+            var formData = new FormData(form);
+            var contactFormContainer = document.getElementById('contactFormContainer');
+            var responseMessage = document.getElementById('responseMessage');
+            var loader = document.getElementById('loader');
+            var contactHeading = document.querySelector('.contact-heading');
+            var sendingHeading = document.querySelector('.sending-heading');
+            
+            // Show the loader and change the heading to "Sending..."
+            loader.style.display = 'block';
+            contactHeading.style.display = 'none'; // Hide original heading
+            sendingHeading.style.display = 'block'; // Show "Sending..." heading
+
+            // Hide the form
+            form.style.display = 'none';
+
+            // Send form data to Google Apps Script using fetch
+            fetch(form.action, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Hide the loader
+                loader.style.display = 'none';
+
+                // Show the response message
+                contactFormContainer.innerHTML = '';
+                
+                if (data.result === 'success') {
+                    responseMessage.style.color = 'green';
+                    responseMessage.textContent = data.message;
+                    contactFormContainer.appendChild(responseMessage);
+                } else {
+                    responseMessage.style.color = 'red';
+                    responseMessage.textContent = data.message;
+                    contactFormContainer.appendChild(responseMessage);
+                }
+            })
+            .catch(error => {
+                // Hide the loader and show an error message
+                loader.style.display = 'none';
+                responseMessage.style.color = 'red';
+                responseMessage.textContent = 'Something went wrong, please try again.';
+                contactFormContainer.appendChild(responseMessage);
+            });
+        }
+
+        // Hamburger menu toggle for mobile
+        const hamburger = document.querySelector('.hamburger-menu');
+        const sidebar = document.querySelector('.sidebar');
+        
+        hamburger.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+        });
+    </script>
+
+</body>
+</html>

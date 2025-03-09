@@ -1,0 +1,817 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Styling */
+body {
+    font-family: Calibri;
+    background: linear-gradient(to right, #0a2a57, #1a4a82); /* Elegant gradient background for the homepage */
+    color: #fff;
+    line-height: 1.6;
+    height: 100vh;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: transparent;
+    z-index: 10;
+    width: 100%; /* Ensures the header takes full width */
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header .logo {
+    width: 19rem;  /* Logo size adjusted using viewport width */
+    height: auto;
+    margin-right: 0rem;
+}
+
+/* Navigation Bar */
+header nav {
+    display: flex;
+    justify-content: flex-end; /* Aligns the navigation to the right */
+    flex-grow: 1; /* Allows the nav bar to take up the remaining space */
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hamburger Menu for Mobile */
+.hamburger-menu {
+    display: none; /* Hide by default */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hamburger-menu div {
+    height: 4px;
+    background-color: #fff;
+    width: 100%;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Sidebar hidden off-screen by default */
+    width: 250px;
+    height: 100%;
+    background-color: #0a2a57;
+    transition: 0.3s ease-in-out;
+    padding: 20px;
+    z-index: 100;
+}
+
+.sidebar a {
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: block;
+    margin: 20px 0;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+.sidebar.open {
+    left: 0; /* Sidebar comes in when open */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;  /* Make sure it is positioned relative so video can be placed absolutely */
+    background-size: cover;
+    background-position: center center;
+    color: white; /* White text to stand out against the background */
+    text-align: center; /* Center the text */
+    padding: 100px 20px; /* Add some padding to create space */
+    overflow: hidden;  /* Ensure the video doesn't spill over */
+}
+
+/* Video Background */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Ensures the video covers the entire area */
+    z-index: -1;  /* Ensures the video is behind the text */
+}
+
+/* Hero Text */
+.hero-text {
+    position: relative;
+    z-index: 1;  /* Ensures the text appears above the video */
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+/* About Us Section */
+.about {
+    padding: 50px 40px;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: left;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #1a4a82; /* Highlighted color for the heading */
+    text-align: center;
+}
+
+.about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify; /* Justify text for better alignment */
+}
+
+.about h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 30px;
+    color: #1a4a82; /* Heading color for sections */
+    border-bottom: 2px solid #1a4a82; /* Underline effect */
+    padding-bottom: 5px;
+    text-align: left;
+}
+
+.about ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.about ul li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.about a {
+    display: inline-block;
+    color: #1a4a82;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 8px 20px;
+    border: 2px solid #1a4a82;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.about a:hover {
+    background-color: #1a4a82;
+    color: white;
+    text-decoration: none;
+}
+
+
+/* Courses Section */
+.courses {
+    padding: 50px 40px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 8px; /* Rounded corners for a clean effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+.courses h2 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.courses table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.courses th, .courses td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.courses th {
+    background-color: #0a2a57;
+    color: white;
+}
+
+.courses td {
+    background-color: White;
+    color: black;
+}
+
+
+.courses h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #1a4a82; /* Matching color theme */
+    margin-bottom: 20px;
+}
+
+.courses p {
+    font-size: 1.2rem;
+    line-height: 1.5; /* Reduced line height for better readability */
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.courses ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.courses ul li {
+    font-size: 1.1rem;
+    line-height: 1.5;  /* Reduced line height for compactness */
+    margin-bottom: 1px; /* Reduced margin between items */
+    padding-left: 20px;
+    position: relative;
+}
+
+
+
+.courses h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 30px;
+    color: #1a4a82;
+    border-bottom: 2px solid #1a4a82;
+    padding-bottom: 5px;
+    text-align: left;
+}
+
+.courses ul li:before {
+    content: "•";  /* Custom bullet */
+    color: black;  /* Bullet color */
+    position: relative;
+    left: 0px;
+    top: 0;
+    font-size: 1.5rem;
+    margin-left: -20px;
+}
+
+.courses a {
+    color: #1a4a82;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.courses a:hover {
+    text-decoration: underline;
+}
+
+/* Specific Styling for Electrician Section */
+.electrician {
+    background-color: #f0f8ff; /* Light blue background */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.electrician h4 {
+    color: #1a4a82; /* Blue color for the title */
+    margin-bottom: 10px;
+}
+
+/* Specific Styling for Electronics Mechanic Section */
+.electronics-mechanic {
+    background-color: #e6ffe6; /* Light green background */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.electronics-mechanic h4 {
+    color: #1a4a82; /* Blue color for the title */
+    margin-bottom: 10px;
+}
+
+/* Specific Styling for Diesel Mechanic Section */
+.diesel-mechanic {
+    background-color: #f9f3e1; /* Light yellow background */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.diesel-mechanic h4 {
+    color: #1a4a82; /* Blue color for the title */
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .courses {
+        padding: 20px 25px; /* Adjusted padding for mobile */
+    }
+    .courses h2 {
+        font-size: 2rem; /* Slightly smaller heading */
+    }
+    .courses p,
+    .courses ul li {
+        font-size: 1rem; /* Reduced font size for mobile */
+    }
+    .courses th, .courses td {
+    padding: 5px;
+    border: 1px solid #ddd;
+    text-align: center;
+    }
+
+}
+
+
+
+/* Image and Content Section */
+.image-content {
+    display: flex;
+    background-color: #fff;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px;
+}
+
+.image-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 48%; /* Make sure the images take half the width */
+}
+
+.image-item img {
+    width: 40%; /* Adjust this value as needed */
+    height: auto;
+}
+
+.image-item .content {
+    max-width: 55%; /* Ensure content doesn't overflow */
+    color: black;
+}
+
+.image-item .content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.image-item .content p {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        display: none; /* Hide the default navigation on mobile */
+    }
+
+    .hamburger-menu {
+        display: flex; /* Show hamburger menu */
+    }
+
+    .sidebar {
+        left: -250px; /* Sidebar is hidden by default */
+    }
+
+    .sidebar.open {
+        left: 0; /* Sidebar will slide in */
+    }
+
+    header nav {
+        display: none; /* Hide regular navigation on mobile */
+    }
+
+    /* Image and Content Section for Mobile */
+    .image-content {
+        padding: 20px;
+    }
+
+    .image-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%; /* Full width for each item */
+    }
+
+    .image-item img {
+        width: 80%; /* Images take up more space on small screens */
+    }
+
+    .image-item .content {
+        max-width: 80%; /* Adjust content width for mobile screens */
+    }
+}
+
+/* ----- General Styling ----- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Contact Page Background */
+.contact-background {
+    background: #f4f4f4;
+    padding: 80px 0;  /* Added extra padding to give more space */
+}
+
+/* Container for the contact sections */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;  /* Gap between the left and right sections */
+    max-width: 1200px;
+    margin: 0 auto;  /* Center the container */
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+/* Left Section: Reach Out to Us */
+.contact-details {
+    flex: 1;
+    max-width: 40%; /* Ensures this section doesn't take up too much space */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.contact-details h2 {
+    font-size: 2rem;
+    background-color: white;
+    color: red;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contact-details h3 {
+    font-size: 1.5rem;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    color: Black;
+    text-align: center;
+}
+
+.contact-details ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.contact-details li {
+    margin: 15px 0;
+}
+
+.contact-details li strong {
+    color: #0a2a57;
+    font-weight: 600;
+}
+
+/* Link Styling */
+.contact-details a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: #1a4a82;
+}
+
+/* Right Section: Contact Form */
+.contact-form {
+    flex: 1;
+    max-width: 50%;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.contact-form h2 {
+    font-size: 2rem;
+    background-color: #0a2a57;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 20px;
+    padding: 12px;
+    width: 100%;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #0a2a57; /* Navy blue */
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 4px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #1a4a82; /* Lighter navy blue on hover */
+}
+
+.contact-form input[type="submit"]:active {
+    background-color: #154c76; /* Darker blue on click */
+}
+
+/* Footer */
+footer {
+    background-color: #1a4a82;
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+    font-size: 1rem;
+    margin-top: 40px;
+    font-family: Arial, sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .contact-details,
+    .contact-form {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .contact-form h2 {
+        font-size: 1.5rem;
+    }
+    
+    .contact-details h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-details li {
+        font-size: 1rem;
+    }
+}
+
+/* ----- Loader Styles ----- */
+#loader {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* General Styles for New Pages */
+
+/* Faculty Section */
+.faculty {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.faculty h2 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.faculty p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.faculty-member {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+
+.faculty-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.faculty-member h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.faculty-member p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Fee Structure Section */
+.fee-structure {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.fee-structure h2 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.fee-structure table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.fee-structure th, .fee-structure td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.fee-structure th {
+    background-color: #0a2a57;
+    color: white;
+}
+
+.fee-structure td {
+    background-color: White;
+    color: black;
+}
+
+.google-maps {
+    text-align: center; /* Centers the content inside the section */
+    margin-top: 30px;
+}
+
+.maps-container {
+    display: flex; /* Side-by-side layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Align items vertically */
+    gap: 50px; /* Adds space between the map and the address */
+    max-width: 1000px; /* Optional: limits the maximum width of the container */
+    margin: 0 auto; /* Centers the container horizontally */
+    position: relative; /* Ensure proper positioning for overlay */
+    flex-wrap: wrap; /* Allow wrapping of items on smaller screens */
+}
+
+.map-link {
+    position: relative; /* Parent container for the image and text */
+    display: inline-block;
+}
+
+.maps-image {
+    max-width: 100%; /* Ensure image does not overflow the container */
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    max-width: 175px; /* Set a reasonable max width */
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 5%; /* Center text vertically */
+    left: 50%; /* Center text horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to center */
+    color: white; /* White text for contrast */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 10px 15px; /* Add padding for better readability */
+    border-radius: 8px; /* Optional: rounded corners */
+    text-align: center;
+    font-size: 14px; /* Adjust font size */
+    max-width: 90%; /* Optional: Limit text width */
+}
+
+.address {
+    max-width: 300px; /* Set a reasonable max width for the address container */
+    text-align: left; /* Align text to the left for address */
+}
+
+.address p {
+    margin: 5px 0; /* Adds spacing between address lines */
+}
+
+/* Mobile Specific Styles */
+@media (max-width: 768px) {
+    header nav ul {
+        display: none; /* Hide the default navigation on mobile */
+    }
+
+    .hamburger-menu {
+        display: flex; /* Show hamburger menu */
+    }
+
+    .sidebar {
+        left: -250px; /* Sidebar is hidden by default */
+    }
+
+    .sidebar.open {
+        left: 0; /* Sidebar will slide in */
+    }
+
+    header nav {
+        display: none; /* Hide regular navigation on mobile */
+    }
+
+    /* Image and Content Section for Mobile */
+    .image-content {
+        padding: 20px;
+    }
+
+    .image-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%; /* Full width for each item */
+    }
+
+    .image-item img {
+        width: 80%; /* Images take up more space on small screens */
+    }
+
+    .image-item .content {
+        max-width: 80%; /* Adjust content width for mobile screens */
+    }
+}

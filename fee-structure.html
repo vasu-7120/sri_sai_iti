@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fee Structure - SRI SAI ITI">
+    <title>Fee Structure - SRI SAI ITI</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo-container">
+            <img src="assets/images/logo.png" alt="Institute Logo" class="logo">
+        </div>
+
+        <!-- Hamburger Menu (Visible on Mobile) -->
+        <div class="hamburger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <div class="sidebar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="courses.html">Courses</a>
+            <a href="faculty.html">Faculty</a>
+            <a href="fee-structure.html">Fee Structure</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <!-- Main Navigation (Visible on Desktop) -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="fee-structure.html">Fee Structure</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Fee Structure Section -->
+    <section class="fee-structure">
+        <h2>Our Fee Structure</h2>
+        <p>Here is the fee structure for the various courses we offer:</p>
+        <table>
+            <tr>
+                <th>Course</th>
+                <th>Fee (INR)</th>
+		<th>Scholarship(RTF & MTF)</th>
+            </tr>
+            <tr>
+                <td>ELECTRICIAN (NSQF)</td>
+                <td rowspan="3"><a href="https://drive.google.com/file/d/1MJs85KfGLUYJzWcyZH0wG-fqwaLX6TvZ/view?usp=sharing" target="_blank">As per Govt. GO: DGE&T-19/19/2012-CD(Pt)</a></td>
+		<td rowspan="3">Eligible for all SC, ST, BC, EBC, Kapu & Minority Students</td>
+            </tr>
+            <tr>
+                <td>ELECTRONICS MECHANIC (NSQF)</td>
+            </tr>
+            <tr>
+                <td>MECHANIC DIESEL (NSQF)</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 SRI SAI ITI. All rights reserved.</p>
+	<p class="lays">Website Credits : vasu7120@gmail.com</p>
+    </footer>
+
+    <!-- JavaScript for Sidebar Toggle -->
+    <script>
+        const hamburger = document.querySelector('.hamburger-menu');
+        const sidebar = document.querySelector('.sidebar');
+        
+        hamburger.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+        });
+    </script>
+
+</body>
+</html>
